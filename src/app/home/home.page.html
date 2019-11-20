@@ -5,10 +5,13 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
+<!-- Explicando: en este ejemplo se usa la creacion de eventos para poder comunicar diferentes elementos
+En este caso no hemos usado otra page si no un componente que es una parte de una pagina por lo tanto
+no tiene ion-content la otra parte curiosa es que debe definirse en el modulo de la pagina donde vaya a usarse
+Crear componentes es una buena forma de tener elementos comunes para todas las paginas -->
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+  <div>
+    <button (click)="createUser('jose')">crear un usuario</button>
   </div>
+  <app-destino></app-destino>
 </ion-content>
